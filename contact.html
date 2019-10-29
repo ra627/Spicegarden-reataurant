@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Spice Garden - Table Booking and contact page</title>
+      <link rel="stylesheet" href="css/components.css">
+      <link rel="stylesheet" href="css/responsee.css">
+      <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+      <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+      <!--<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">-->
+      <!-- CUSTOM STYLE -->  
+      <link rel="stylesheet" href="css/template-style.css">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
+      <script type="text/javascript" src="js/modernizr.js"></script>
+      <script type="text/javascript" src="js/responsee.js"></script>
+        
+      <!--[if lt IE 9]>
+	      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+ <script type="text/javascript">
+   $(document).ready(function() {
+    $("#datepicker").datepicker();
+   });
+   
+   var name;
+    
+   function validate() {
+		
+		var name = document.forms["myForm"]["custname"].value;
+		
+		var phone = document.forms["myForm"]["custtele"].value;
+		
+		var email = document.forms["myForm"]["custemail"].value;
+		
+		var adate = document.forms["myForm"]["datepicker"].value;
+			   
+		
+     if (name == null || name == "" && phone == null || phone == "" && 
+     email == null || email == "" && adate == null || adate == "" ) {
+
+       document.getElementById('thename').innerHTML = "Please enter your full name";	   
+     
+       document.getElementById('thetel').innerHTML = "Please enter your Telephone"
+     
+       document.getElementById('mailer').innerHTML = "Please enter your Email";
+            	
+       document.getElementById('datemessage').innerHTML = "Please select a date";
+     
+       return false;
+     
+     }		
+		
+		
+		if (name == null || name == "") {
+			 
+			document.getElementById('thename').innerHTML = "Please enter your full name";			
+        		
+			return false;
+		}
+		
+		if (phone == null || phone == "") {
+			 
+			document.getElementById('thetel').innerHTML = "Please enter your Telephone";			
+        		
+			return false;
+		}
+		
+	   if (email == null || email == "") {
+			 
+			document.getElementById('mailer').innerHTML = "Please enter your Email";			
+        		
+			return false;
+		}
+		
+
+		if (adate == null || adate == "") {
+			 
+			document.getElementById('datemessage').innerHTML = "Please select a date";			
+        		
+			return false;
+		}
+		   
+	}
+	
+ </script>   
+  <style type="text/css">
+
+	.errmess {margin-left:0.4em;margin-top:-1.2em;padding-bottom:0.5em;color:red;font-size:0.9em}  
+  
+  </style>
+   </head>
+   <body class="size-1140">
+      <!-- TOP NAV WITH LOGO -->  
+      <header>
+         <nav>
+            <div class="line">
+               <div style="margin-left:2%;width:95%" class="top-nav">              
+                  <div style="background-color:#ff3399" class="logo hide-l">
+                      <img style="background-color:#ff3399" src="SpiceGardenLogo.png"> 
+                     <!-- <a href="../design/">DESIGN <br /><strong>THEME</strong></a> -->
+                  </div>                  
+                  <p class="nav-text">Menu</p>
+                  <div class="top-nav s-12 l-5">
+                     <ul class="right top-ul chevron">
+                        <li><a href="index.html">Home</a>
+                        </li>
+                        <li><a href="gallery.html">Gallery</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <ul class="s-12 l-2">
+                     <li class="logo hide-s hide-m">
+                       <img style="background-color:#ff3399" src="SpiceGardenLogo.png">                             
+                        <!-- <a href="../design/">DESIGN <br /><strong>THEME</strong></a> -->
+                     </li>
+                  </ul>
+                  <div class="top-nav s-12 l-5">
+                     <ul class="top-ul chevron">
+                        <li><a href="index3.html">Menu</a>
+                        </li>
+                        
+                        <li style="padding-top:4%"><span style="color:yellow">BOOKING</span>
+                        </li>
+                     </ul> 
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <section>
+         <!-- <div style="background-color:red" id="head">
+            <div class="line">
+               <h1 style="color:white"></h1> 
+            </div>
+         </div> --> 
+         <div style="background-color:white;padding-bottom:7em;padding-top:5em" id="content" class="left-align contact-page">
+            <div class="line">
+               <div class="margin">
+                  <div style="margin-top:6%;padding-left:2em" style="color:black" class="s-12 l-6">
+                     <h2 style="color:black">Contact Us</h2>
+                     <address>
+                     
+                     
+                         <img style="width:17em;height:22em" src="spicegardenicon.jpg" alt="spicegardensicons">                     
+                     
+                     		<!-- <i class="icon-globe_black icon"> -->
+                        <!-- <p><i class="icon-home icon"></i><span style="margin-left:0em">202 Ocean Road</span></p>
+                        
+                        <p style="margin-top:-2%;margin-left:2.5em">Southsd Shields Tyne & Wear NN3 2JQ</p> --> 
+                     </address>
+                     
+                     <!-- <address>                       
+                       <img style="margin-top:2%;width:2em;height:2em" src="Phonesymbol.jpg" alt="phone Imgae"/>
+                        <span style="margin-top:-2em;margin-left:2.3em">0191 455 9867</span> 
+                     </address> -->
+                     
+                     <!-- <address>   
+                        <!-- <p><img style="margin-top:2%;width:2em;height:2em" src="Phonesymbol.jpg" alt="phone Imgae"/></p> --> 
+                        <!-- <div style="margin-top:-5%;margin-left:8%"><h5>12747575</h5></div> -->                                              
+                        <!-- <p style="margin-top:2%"><i class="icon-mail icon"></i>Spice Garden Email</p> -->
+                     <!-- </address> -->
+                     
+                     <!-- <p><img style="margin-top:2%;width:1.9em;height:1.9em" src="Phonesymbol.jpg" alt="phone Imgae"/></p>
+                     <div style="margin-top:-2em;margin-left:2.3em">0191 455 9867</div>  
+                     <br /> -->
+                     
+                     <!-- <h2 style="margin-top:2.5%;color:black">Social</h2>
+                     <p><i class="icon-facebook icon"></i> <a href="https://www.facebook.com/pages/Vision-Design-graphic-ZOO/154664684553091"><span style="color:black">Spice Garden</span></a></p>
+                     <!-- <p><i class="icon-facebook icon"></i> <a href="https://www.facebook.com/myresponsee">Responsee</a></p> -->
+                     <!-- <p class="margin-bottom"><i class="icon-twitter icon"></i> <a href="https://twitter.com/MyResponsee"><span style="color:black">Spice Garden</span></a></p>-->
+                  </div>
+                  <div style="margin-top:6%" class="s-12 l-6">
+                     <a name="booker"><h2 style="color:black">Book A Table</h2></a>
+                     <form name="myForm" action="processForm.php" method="post" class="customform">
+                        <div class="s-12 l-7"><input name="custname" placeholder="Your Name" title="Your Name" type="text">
+                        <div class="errmess" id="thename"></div></div>
+                        <div class="s-12 l-7"><input name="custtele" placeholder="Your Telephone" title="Your Telephone" type="text">
+                        <div class="errmess" id="thetel"></div></div>
+                        <div class="s-12 l-7"><input  name="custemail" placeholder="Your email" title="Your email" type="text">
+                        <div class="errmess" id="mailer"></div></div>                        
+                        <div class="s-12 l-7">
+                          <select style="color:gray" name="myselect" required>
+                             <option value="Number of People">Select Number of People</option>   										  
+							  		  <option value="2 people">2 people</option>
+									  <option value="3 people">3 people</option>
+									  <option value="4 people">4 people</option>
+									  <option value="5 people">5 people</option>
+									  <option value="6 people">6 people</option>
+									  <option value="7 people">7 people</option>
+									  <option value="8 people">8 people</option>
+									  <option value="9 people">9 people</option>
+									  <option value="10 people">10 people</option>
+									  
+									  <option value="12 people">12 people</option>
+									  <option value="13 people">13 people</option>
+									  <option value="14 people">14 people</option>
+									  <option value="15 people">15 people</option>
+									  <option value="16 people">16 people</option>
+									  <option value="17 people">17 people</option>
+									  <option value="18 people">18 people</option>
+									  <option value="19 people">19 people</option>
+									  <option value="20 people">20 people</option>
+									  <option value="More than 20 people">More than 20 people</option>
+									  <option value="More than 30 people">30 people</option>
+									  <option value="More than 30 people">More than 30 people</option>
+									  
+									</select>
+									
+									<select style="color:gray" name="mytime" required>
+                             <option value="Number of People">Select A Booking Time</option>   										  							  		  <option value="2 people">2 people</option>
+									  <option value="5:30pm">5:30pm</option>
+									  <option value="5:45pm">5:45pm</option>
+									  <option value="6:00pm">6.00pm</option>
+									  <option value="6:15pm">6.15pm</option>
+									  <option value="6:30pm">6.30pm</option>
+									  <option value="6:45pm">6.45pm</option>
+									  <option value="7:00pm">7.00pm</option>
+									  <option value="7:15pm">7.15pm</option>
+									  <option value="7:30pm">7.30pm</option>
+									  <option value="7:30pm">7.45pm</option>
+									  <option value="7:30pm">8.00pm</option>
+									  <option value="7:30pm">8.30pm</option>
+									  <option value="7:30pm">9.00pm</option>
+									  <option value="7:30pm">9.30pm</option>
+									  <option value="7:30pm">10.00pm</option>
+									  <option value="7:30pm">10.30pm</option>
+									  <option value="7:30pm">11.00pm</option>
+									  <option value="7:30pm">11:30pm</option>
+									  <option value="7:30pm">12.00pm</option>
+									</select>
+								</div>
+                        
+                        <div class="s-12 l-7"><input onclick="smarty4()" id="datepicker" name="datepicker" placeholder="Choose Date" title="Choose Date" type="text" />
+                        <div class="errmess" id="datemessage"></div></div>
+                        <div class="s-12"><textarea name="anymessage" placeholder="Your message" name="anymessage" rows="5"></textarea>
+                        <div id="themessage"></div></div>
+                        <div class="s-12 m-6 l-4"><input type="submit" onclick="return validate();" value="Book Table"></div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- MAP -->	
+         <div id="map-block">  	  
+           
+       		<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:1%;width:100%;'><div id='gmap_canvas' style='height:350px;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">	embed google maps</a></small></div><div><small><a href="https://termsandcondiitionssample.com">terms and conditions sample</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:11,center:new google.maps.LatLng(55.0003121,-1.4249426999999741),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(55.0003121,-1.4249426999999741)});infowindow = new google.maps.InfoWindow({content:'<strong>Spice Garden</strong><br>202 Ocean Road, South Shields, Tyne & Wear, NE33 2JQ<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d682251.1123056135!2d17.063451638281247!3d48.09010461740988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8cbf758ecb9f%3A0xddeb1d26bce5eccf!2sGallayova+2150%2F19%2C+841+02+D%C3%BAbravka%2C+Slovensk%C3%A1+republika!5e0!3m2!1ssk!2s!4v1412519122400" width="100%" height="450" frameborder="0" style="border:0"></iframe> -->
+        </div>
+         <!-- <div id="fourth-block">
+            <div class="line">
+               <div id="owl-demo2" class="owl-carousel owl-theme">
+                  <div class="item">
+                     <h2>Amazing responsive template</h2>
+                     <p class="s-12 m-12 l-8 center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                     </p>
+                  </div>
+                  <div class="item">
+                     <h2>Responsive components</h2>
+                     <p class="s-12 m-12 l-8 center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                     </p>
+                  </div>
+                  <div class="item">
+                     <h2>Retina ready</h2>
+                     <p class="s-12 m-12 l-8 center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div> -->
+      </section>
+      <!-- FOOTER -->   
+      <footer style="background-color:black">
+         <div class="line">
+            <div class="s-12 l-6">
+               <p>Spice Garden All rights reserved</span><i style="margin-left:5%" class="icon-facebook icon"></i> <i style="margin-left:5%" class="icon-twitter icon"></i></p>
+            </div> 
+            <div class="s-12 l-6">
+                <h6 style="text-align:center;word-spacing:1.6em"><a href="index.html"> Home </a><a href="index3.html"> Menu </a> <a href="gallery.html">Gallery</a>
+        			  <span style="color:yellow">Booking</span></h6>
+               <!-- <p class="right">
+                  <a class="right" href="http://www.myresponsee.com" title="Responsee - lightweight responsive framework">Design and coding by Responsee Team</a>
+               </p> -->
+            </div> 
+         </div>
+      </footer>
+      <!-- <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>   
+      <script type="text/javascript">
+         jQuery(document).ready(function($) {  
+           $("#owl-demo").owlCarousel({
+         	slideSpeed : 300,
+         	autoPlay : true,
+         	navigation : false,
+         	pagination : false,
+         	singleItem:true
+           });
+           $("#owl-demo2").owlCarousel({
+         	slideSpeed : 300,
+         	autoPlay : true,
+         	navigation : false,
+         	pagination : true,
+         	singleItem:true
+           });
+         });	
+          
+      </script> --> 
+   </body>
+</html>
